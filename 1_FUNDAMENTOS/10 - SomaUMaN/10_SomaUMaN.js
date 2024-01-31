@@ -16,11 +16,12 @@ const somaUMaN = (final) => {
         return ac;
     }, 0)
 
-    console.log(total);
+    return total;
 }
 
 try {
     const resultado = somaUMaN(n);
+    console.log(`O valor da soma é ${resultado}`);
 } catch (e) {
     console.log(e);
 }
