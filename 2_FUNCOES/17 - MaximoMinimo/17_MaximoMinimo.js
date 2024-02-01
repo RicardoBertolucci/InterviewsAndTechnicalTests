@@ -15,5 +15,5 @@ try {
     }
     console.log(`O maior valor entre ${n1} e ${n2} é ${maiorValor(n1, n2)} || O menor valor entre ${n1} e ${n2} é ${menorValor(n1, n2)}`);
 } catch (e) {
-    console.log(e);
+    console.error(e);
 }
