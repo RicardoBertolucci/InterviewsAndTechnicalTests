@@ -1,25 +1,23 @@
 /* Minha Solução */
 
-const array = [1, 6, 2 , 3, 4, 5, 2 , 6 , 1, 3];
+const array = [1, 6, 2 , 3, 4, 5, 2 , 6 , 1, 3, 7];
 
 const elDuplicado = (array) => {
-    const lista = [];
     for (let i = 0; i < array.length; i++) {
-        let elemento = array[i];
+        let elAtual = array[i];
         let contador = 0;
 
-        for (let k = 0; k < array.length; k++) {
-            if(elemento === array[k]) {
+        for (let j = 0; j < array.length; j++) {
+            if(elAtual === array[j]) {
+                if(contador >= 1) {
+                    array.splice(j, 1);
+                }
                 contador++;
             }
         }
-        
-        if(contador === 1) {
-            lista.push(array[i]);
-        }
     }
 
-    return lista;
+    return array;
 }
 
 const resultado = elDuplicado(array);
