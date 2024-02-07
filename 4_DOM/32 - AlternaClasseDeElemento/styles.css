@@ -1,0 +1,9 @@
+.ativo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    background: rgb(21, 144, 153);
+    height: 100px;
+}
