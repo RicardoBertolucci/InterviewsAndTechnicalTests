@@ -1,0 +1,7 @@
+.lista > .elemento:nth-child(5) {
+    margin-bottom: 10px;
+}
+
+.selecionado {
+    background: #cdcdcd;
+}
