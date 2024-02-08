@@ -1,0 +1,49 @@
+.style-modal {
+    border: 1px solid black;
+    width: 80%;
+    margin: 20px auto 0;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-modal {
+    background: #cdcdcd;
+    width: 90%;
+}
+
+.content-modal > h1 {
+    text-align: center;
+}
+
+.content-modal > div {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 4rem;
+}
+
+.cube-red {
+    width: 80px;
+    height: 80px;
+    background-color: red;
+}
+.cube-blue {
+    width: 80px;
+    height: 80px;
+    background-color: blue;
+}
+.cube-green {
+    width: 80px;
+    height: 80px;
+    background-color: green;
+}
+.cube-yellow {
+    width: 80px;
+    height: 80px;
+    background-color: yellow;
+}
+
+.close-modal {
+    font-size: 2rem;
+    margin: 10px 10px 0 0;
+}
