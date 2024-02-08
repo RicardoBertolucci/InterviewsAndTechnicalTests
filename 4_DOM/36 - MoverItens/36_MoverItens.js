@@ -1,39 +1,45 @@
-const lista = document.querySelector('.lista');
+//Minha resolução
+// const lista = document.querySelector('.lista');
 
-const li = lista.getElementsByTagName('li');
+// const li = lista.getElementsByTagName('li');
 
-const buttonTop = document.querySelector('.btn-up');
-const buttonBottom = document.querySelector('.btn-down');
+// const buttonTop = document.querySelector('.btn-up');
+// const buttonBottom = document.querySelector('.btn-down');
 
-const buttonUp = () => {
-    console.log('Cliquei em subir!');
-}
+// const buttonUp = (buttonTop) => {
+//     buttonTop.addEventListener('click', (e) => {
+//         console.log('Cliquei em subir!');
+//     })
+    
+// }
 
-const buttonDown = () => {
-    console.log('Cliquei em descer!');
-}
+// const buttonDown = (buttonBottom) => {
+//     console.log('Cliquei em descer!');
+// }
 
 
 
-lista.addEventListener('click', (e) => {
-    const el = e.target;
+// lista.addEventListener('click', (e) => {
+//     const el = e.target;
 
-    for (let i = 0 ; i < li.length; i++) {
-        if(li[i].classList.contains('selecionado')) {
-            li[i].classList.remove('selecionado');
-        };
-    };
+//     for (let i = 0 ; i < li.length; i++) {
+//         if(li[i].classList.contains('selecionado')) {
+//             li[i].classList.remove('selecionado');
+//         };
+//     };
 
-    el.classList.add('selecionado');
+//     el.classList.add('selecionado');
 
-    let escolhido;
+//     let escolhido;
 
-    for (let i = 0 ; i < li.length; i++) {
-        if(li[i].classList.contains('selecionado')) {
-            escolhido = li[i];
-        };
-    };
+//     for (let i = 0 ; i < li.length; i++) {
+//         if(li[i].classList.contains('selecionado')) {
+//             escolhido = li[i];
+//         };
+//     };
 
-    // buttonTop.addEventListener('click', buttonUp());
-    // buttonBottom.addEventListener('click', buttonDown());
-})
+
+    
+//     buttonTop.addEventListener('click', buttonUp());
+//     buttonBottom.addEventListener('click', buttonDown());
+// })
