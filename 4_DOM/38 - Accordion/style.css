@@ -1,0 +1,14 @@
+.container-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+#accordion {
+    border: 1px solid black;   
+    cursor: pointer;
+}
+
+#accordion > p {
+    display: none;
+}
