@@ -1,12 +1,20 @@
-// const buttonOpen = document.querySelector('.open-modal');
-// const buttonClose = document.querySelector('.close-modal');
-// const body = document.querySelector('body');
-// const modal = document.querySelector('.style-modal');
+const btnAbrir = document.querySelector('#abrir');
+const btnFechar = document.querySelector('.close');
+const modal = document.querySelector('.modal');
 
-// buttonOpen.addEventListener('click', () => {
-//     modal.style.display = 'flex';
-// });
+(function funcionalidadesModal (e) {
+    btnAbrir.addEventListener('click', () => {
+        modal.style.display = "block";
+    });
 
-// buttonClose.addEventListener('click', () => {
-//     modal.style.display = 'none';
-// })
+    btnFechar.addEventListener('click', () => {
+        modal.style.display = "none";
+    });
+
+    window.addEventListener('click', (e) => {
+        if(e.target === document.querySelector('#myModal')) {
+            modal.style.display = 'none';
+        }
+    })
+})();
+

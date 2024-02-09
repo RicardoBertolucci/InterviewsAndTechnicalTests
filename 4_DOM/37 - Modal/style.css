@@ -1,50 +1,24 @@
-.style-modal {
-    border: 1px solid black;
-    width: 80%;
-    margin: 20px auto 0;
-    height: 300px;
+.modal {
     display: none;
-    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
-.content-modal {
-    background: #cdcdcd;
-    width: 90%;
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
 }
 
-.content-modal > h1 {
-    text-align: center;
-}
-
-.content-modal > div {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 4rem;
-}
-
-.cube-red {
-    width: 80px;
-    height: 80px;
-    background-color: red;
-}
-.cube-blue {
-    width: 80px;
-    height: 80px;
-    background-color: blue;
-}
-.cube-green {
-    width: 80px;
-    height: 80px;
-    background-color: green;
-}
-.cube-yellow {
-    width: 80px;
-    height: 80px;
-    background-color: yellow;
-}
-
-.close-modal {
-    font-size: 2rem;
-    margin: 10px 10px 0 0;
+.close {
     cursor: pointer;
+    font-weight: bold;
+    float: right;
 }
