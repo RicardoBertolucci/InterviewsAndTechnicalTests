@@ -1,6 +1,3 @@
-
-
-/* JS dele
 //Esse argumento event, vem de qualquer evento que veja a ter na página
 const toggleAccordion = (event) => {
     const header = event.target;//Cada título do accordion que foi clicado
@@ -32,4 +29,3 @@ headers.forEach((header) => {
     //Quando tiver qualquer evento de click em algum desses headers, aciona a função toggleAccordion
     header.addEventListener('click', toggleAccordion)
 });
-*/

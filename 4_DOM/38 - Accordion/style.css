@@ -1,32 +1,6 @@
-/*  Meu CSS */
-
-.container-accordion {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.accordion-content {
-    border: 1px solid black;
-    padding: 10px 0;
-    cursor: pointer;
-}
-
-.accordion-title {
-    width: 90%;
-    margin: 0 auto;
-}
-
-.accordion-paragraph {
-    width: 90%;
-    margin: 0 auto;
-    display: none;
-}
-
-/* CSS dele 
 .accordion-header {
     cursor: pointer;
-    padding: 15px;
+    padding: 10px;
     background-color: #f1f1f1;
     border: 1px solid #ccc;
 }
@@ -38,5 +12,3 @@
     border: 1px solid #ccc;
     border-top: none;
 }
-
-
