@@ -1,4 +1,3 @@
-
 const temporizador = (seg, acao) => {
     setTimeout(acao, seg * 1000);
 }
