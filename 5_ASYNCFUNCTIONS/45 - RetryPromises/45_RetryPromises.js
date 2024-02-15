@@ -1,17 +1,27 @@
-// const acessoAPI = async (api, max, temp) => {
+const acessoAPI = async (dados, tentativas, temp) => {
+    let contador = 0;
+    
+    try {
+        if(contador < tentativas) {
+            contador++;
+            dados()
+                .then((res) => res.json())
+                .then((valor) => console.log(valor))
+                .catch(() => acessoAPI());
+        }
+    } catch (e) {
+        console.error(e);
+    }
+};
 
-//     for (let i = 0; i < max; i++) {
-        
-//         setTimeout(executaChamada(temp), 1000)
-//         // const resposta = await executaChamada(api, temp);
+const API = async () => {
+    const url = await fetch('https://jsonplaceholder.typicode.com/posts/1r');
 
-//     }
-// }
+    return url;
+}
 
-// acessoAPI(
-//     async () => {
-//         return fetch('https://jsonplaceholder.typicode.com/posts/1').then((dados) => console.log(dados));
-//     },
-//     3,
-//     5
-// );
+acessoAPI(
+    API,
+    maxTentaivas = 3,
+    timer = 5
+);
