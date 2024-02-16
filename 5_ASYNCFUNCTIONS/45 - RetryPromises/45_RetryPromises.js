@@ -1,27 +1,22 @@
-const acessoAPI = async (dados, tentativas, temp) => {
-    let contador = 0;
-    
-    try {
-        if(contador < tentativas) {
-            contador++;
-            dados()
-                .then((res) => res.json())
-                .then((valor) => console.log(valor))
-                .catch(() => acessoAPI());
+function tentativa (callback, maxTentativas, intervalo) {
+    return new Promise(async (resolve, reject) => {
+        for(let tentativa = 1; tentativa <= maxTentativas; tentativa++) {
+            try {
+                const resultado = await callback();
+            
+                return resolve(resultado);
+            } catch (erro) {
+                if (tentativa === maxTentativas) return reject(erro);
+
+                await new Promise((r) => setTimeout(r, intervalo));
+            }
         }
-    } catch (e) {
-        console.error(e);
-    }
-};
-
-const API = async () => {
-    const url = await fetch('https://jsonplaceholder.typicode.com/posts/1r');
-
-    return url;
+    });
 }
 
-acessoAPI(
-    API,
-    maxTentaivas = 3,
-    timer = 5
-);
+const fetchComRetry = () => fetch("https://lalalala.com.br")
+
+tentativa(fetchComRetry, 3, 2000)
+    .then((response) => response.json())
+    .then((dados) => console.log(dados))
+    .catch((erro) => console.log('Erro, após 3 tentaivas', erro));
